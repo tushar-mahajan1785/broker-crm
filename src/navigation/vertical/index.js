@@ -22,7 +22,8 @@ const navigation = () => {
     },
     {
       title: 'Business',
-      icon: 'tabler:wallet'
+      icon: 'tabler:wallet',
+      path: '/operations/business/list'
     },
     {
       sectionTitle: 'Client Managements'
@@ -50,51 +51,44 @@ const navigation = () => {
       icon: 'tabler:settings',
       children: [
         {
-          title: 'Location',
-          children: [
-            {
-              title: 'Country',
-            },
-            {
-              title: 'State',
-            },
-            {
-              title: 'City',
-            }
-          ]
+          title: 'Line Of Business',
+          path: '/masters/line-of-business/list'
         },
         {
           title: 'Product',
-          path: '/products/list'
-        },
-        {
-          title: 'Line Of Business',
+          path: '/masters/products/list'
         },
         {
           title: 'Insurance Company',
+          path: '/masters/insurance-company/list'
         },
         {
           title: 'Other',
           children: [
             {
               title: 'Lead Source',
+              path: '/masters/other/lead-source/list'
             },
             {
               title: 'Organization Type',
+              path: '/masters/other/organization-type/list'
             },
             {
               title: 'Industry',
+              path: '/masters/other/industry/list'
             },
             {
               title: 'Role',
+              path: '/masters/other/role/list'
             },
             {
               title: 'Permissions',
+              path: '/masters/other/permission/list'
             }
           ]
-        },
+        }
       ]
-    },
+    }
   ]
 }
 

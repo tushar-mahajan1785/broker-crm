@@ -16,6 +16,7 @@ import OptionsMenu from 'src/@core/components/option-menu'
 
 const Leads = () => {
   const router = useRouter()
+
   const data = [
     {
       color: 'info',
@@ -89,45 +90,11 @@ const Leads = () => {
     }
   ]
 
-  const renderSummary = () => {
-    return data.map((sale, index) => (
-      <Grid item xs={6} md={2} key={index}>
-        <Box key={index} sx={{ display: 'flex', alignItems: 'center' }}>
-          <CustomAvatar skin='light' color={sale.color} sx={{ mr: 4, width: 42, height: 42 }}>
-            <Icon icon={sale.icon} fontSize='1.5rem' />
-          </CustomAvatar>
-          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-            <Typography variant='h5'>{sale.stats}</Typography>
-            <Typography variant='body2'>{sale.title}</Typography>
-          </Box>
-        </Box>
-      </Grid>
-    ))
-  }
-
   return (
     <Grid container>
       <Grid item xs={12}>
         <Card>
-          <CardHeader
-            title={
-              <Grid container spacing={6}>
-                {renderSummary()}
-              </Grid>
-            }
-            action={
-              <>
-                <Button
-                  variant='contained'
-                  onClick={() => {
-                    router.push('/operations/leads/add')
-                  }}
-                >
-                  Create Lead
-                </Button>
-              </>
-            }
-          />
+          <CardHeader title={'Business'} subheader={'All Business'} />
           <Box sx={{ height: 600, width: '100%' }}>
             <DataGrid
               columns={columns}
@@ -135,7 +102,7 @@ const Leads = () => {
               rows={[
                 {
                   id: 1,
-                  name: 'Galen Slixby',
+                  name: 'Customer Name',
                   company: 'Yotz PVT LTD',
                   mobile: '(479) 232-9151',
                   email: 'gslixby0@abc.net.au'
